@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Styly.css" rel="stylesheet" type="text/css" />
+    </head>
+    
+<body class="JakoMenu">
+    <div class="JakoMenu">
+    <form id="form1" runat="server">
+        <div class="JakoMenu">
+            <h2><strong>Hráčská databáze</strong></h2>
+            </div>
+    <div>
+        <table>
+                <tr>
+                    <td>
+
+                        <asp:Menu ID="MenuMain" runat="server" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.9em" ForeColor="#990000" StaticSubMenuIndent="10px" BorderStyle="None" ClientIDMode="Static" Orientation="Horizontal">
+                            <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <DynamicMenuStyle BackColor="#FFFBD6" />
+                            <DynamicSelectedStyle BackColor="#FFCC66" />
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Domů" Value="Domů"></asp:MenuItem>
+                                                                <asp:MenuItem NavigateUrl="~/Prihlas.aspx" Text="Přihlášení" Value="Přihlášení"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Kontakt.aspx" Text="Kontakt" Value="Kontakt"></asp:MenuItem>
+
+                            </Items>
+                            <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticSelectedStyle BackColor="#FFCC66" />
+                        </asp:Menu>
+
+                    </td>
+                    </tr>
+            <tr>
+                <td>
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_body" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </td>
+                </tr>
+        </table>
+
+    </div>
+    </form>
+    </div>
+</body>
+</html>
